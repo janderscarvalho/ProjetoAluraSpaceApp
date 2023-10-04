@@ -9,6 +9,7 @@ import fotos from './fotos.json'
 import { useState } from "react";
 import ModalDeZoom from "./components/ModaldeZoom";
 
+
 const FundoGradiente = styled.div`
   background: linear-gradient(
     175deg,
@@ -41,6 +42,11 @@ const App = () => {
 
   const[fotosDaGaleria, setFotosDaGaleria] = useState(fotos)
   const[fotoSelecionada, setFotoSelecionada] = useState(null)
+
+  const aoAlternarFavorito = (foto) => {
+console.log 
+  }
+
   return (
     <FundoGradiente>
       <EstilosGlobais />
@@ -58,9 +64,13 @@ const App = () => {
           fotos={fotosDaGaleria}/>
 
           </ConteudoGaleria>
+          
         </MainContainer>
       </AppContainer>
-      <ModalDeZoom foto={fotoSelecionada}/>
+      <ModalDeZoom 
+      foto={fotoSelecionada}
+      aoFechar={() => setFotoSelecionada(null)}
+      />
     </FundoGradiente>
   );
 }
