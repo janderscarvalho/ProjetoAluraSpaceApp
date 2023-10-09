@@ -8,6 +8,7 @@ import Galeria from "./components/Galeria";
 import fotos from './fotos.json';
 import ModalDeZoom from "./components/ModaldeZoom";
 import bannerBackground from "./assets/banner.png";
+import Footer from "./components/Footer";
 
 
 const FundoGradiente = styled.div`
@@ -92,7 +93,9 @@ const App = () => {
             
           />
           </ConteudoGaleria>
+          
         </MainContainer>
+        <Footer />
       </AppContainer>
       <ModalDeZoom 
         foto={fotoComZoom}
